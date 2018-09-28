@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Complaint Form</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<link rel="stylesheet" href="css/bootstrap.css"> 
+<link rel="stylesheet" href="css/style.css" type="text/css"/>
+    
+    
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+</head>
+<body>
+
+<div class="header">
+	<div class="agile-top-header">
+		<div class="logo">
+			<h1><a href="index.html">Complaint <span>Form</span></a></h1>
+		</div>
+		<!-- navigation -->
+		<div class="top-left">
+			<div class="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+								
+					</div>
+					<!-- navbar-header -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						 <nav class="linkEffects linkHoverEffect_2">
+							<ul>
+								<li><a href="index.html" data-link-alt="Home" class="active"><span>Home</span></a></li> 
+								<li><a href="#about" data-link-alt="about" class="scroll"><span>About</span></a></li> 
+								<li><a href="#services" data-link-alt="services" class="scroll"><span>Services</span></a></li> 
+								<li><a href="#contact" data-link-alt="Contact Us" class="scroll"><span>Contact Us</span></a></li> 
+							</ul>
+						</nav>
+						
+					</div>
+				</nav>
+					<div class="clearfix"> </div>	
+				</div>
+
+			</div>
+			<div class="clearfix"> </div>	
+			<!-- //navigation -->
+		</div>
+	</div>
+	<!--Slider-->
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides" id="slider">
+					<li>
+						<div class="slider-info">
+							<h3>Complaints Form</h3>
+						    <p>Lay your complains on our portal and we get back to you</p>
+							<div class="readmore-w3">
+								<a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slider-info1">
+							<h3>Reach Out</h3>
+							<p>When you reach out to us....we reply instantly</p>
+							<div class="readmore-w3">
+								<a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="slider-info2">
+							<h3>All Issues addressed</h3>
+							<p>We tend to attend to all issues we get</p>
+							<div class="readmore-w3">
+								<a class="readmore" href="#" data-toggle="modal" data-target="#myModal1">Read More</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+		
+			</div>
+			<div class="clearfix"></div>
+</div>		
+		<!--//Slider-->
+
+		<div class="main" id="main">
+		<div class="w3layouts_main_grid">
+		<div class="booking-form-head-agile">
+		<h3>Complaints form</h3>
+		</div>
+    
+			<form action="" method="post" class="w3_form_post" onsubmit="popUp('Success!');return false;">
+				<div class="w3_agileits_main_grid w3l_main_grid">
+					<div class="agileits_grid">
+						<h5>Name * </h5>
+						<div class="nam">
+							<input type="text" name="Firstname" placeholder="First Name" required="">
+						</div>
+						<div class="nam1">
+							<input type="text" name="Lastname" placeholder="Last Name" required="">
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="w3_agileits_main_grid w3l_main_grid">
+					<div class="agileits_grid">
+						<h5>E-mail </h5>
+							<input type="email" name="email" placeholder="ex : myname@gmail.com" required="">
+					</div>
+				</div>
+				<div class="agileits_main_grid w3_agileits_main_grid">
+					<div class="wthree_grid">
+						<h5>Issue Category</h5>
+						<select id="category" name="category" required="">
+							<option value=" ">None</option>
+							<option value="category1">Political Issue</option>
+							<option value="category2">Finance Issue</option>
+							<option value="category3">Sector Issue</option>
+                            <option value="category3">Banking Issue</option>
+							<option value="category3">Family Issue</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="agileits_main_grid w3_agileits_main_grid">
+                    <div class="wthree_grid">
+                        <h5>Comment</h5>
+                <textarea style="width:100%; height:90px" name="comment" placeholder="Comment"></textarea>
+                </div>
+                </div>
+				<div class="w3_main_grid">
+					
+					<div class="w3_main_grid_right">
+						<input type="submit" value="Submit"></label>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</form>
+            <div id="popup"></div>
+		</div>
+
+</div>
+
+		 <script src="js/responsiveslides.min.js"></script>
+		 <script>
+			$(function () {
+			  $("#slider").responsiveSlides({
+				auto: true,
+				manualControls: '#slider3-pager',
+			  });
+			});
+		  </script>
+    
+    <script>
+ /* pop up div with message */
+function popUp(msg)
+{
+   document.getElementById('popup').innerHTML = "<p>"+msg+"<br>\
+<button onclick='popDown();'>Close Window</button></p>";
+   document.getElementById('popup').style.display="block";
+}
+/* pop down div */
+function popDown()
+{
+   document.getElementById('popup').innerHTML = "";
+   document.getElementById('popup').style.display="none";
+}
+    </script>
+<div class="footer-w3">
+	<p>&copy; 2018 Complaints Form</p>
+</div>
+</body>
+</html>
