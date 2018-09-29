@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'>
+<title>Untitled</title>
+<style type="text/css">
+#popup {
+   display: none;
+   border: outset gray 2px;
+   background-color: silver;
+   padding: .5em;
+   position: absolute;
+   z-index: 2;
+   top: 33%;
+   left: 50%;
+   width: 10em;
+   margin: 0 -6em;
+   text-align: center;
+}
+#popup p {
+   margin: 0;
+   padding: 1em;
+   border: inset 1px silver;
+}
+</style>
+<script type="text/javascript">
+/* pop up div with message */
+function popUp(msg)
+{
+   document.getElementById('popup').innerHTML = "<p>"+msg+"<br>\
+<button onclick='popDown();'>Close Window</button></p>";
+   document.getElementById('popup').style.display="block";
+}
+/* pop down div */
+function popDown()
+{
+   document.getElementById('popup').innerHTML = "";
+   document.getElementById('popup').style.display="none";
+}
+</script>
+</head>
+<body>
+
+<form action="#" onsubmit="popUp('Success!');return false;" method="post">
+<fieldset>
+<label>This is a test.<br>
+<input type="submit" value="Submit"></label>
+</div>
+</fieldset>
+</form>
+
+<!-- this will be the success pop-up -->
+<div id="popup"></div>
+
+</body>
+</html>

@@ -1,0 +1,262 @@
+
+<style>
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Raleway;
+	box-sizing: border-box;
+}
+
+#header {
+	height: 50px;
+	position: absolute;
+	top: 16px;
+	width: 100%;
+	background-color: #2077CF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+a {
+	text-decoration: none;
+}
+
+#links {
+	position: fixed;
+	right: 20px;
+	top: 32px;
+}
+
+#links a {
+	margin-right: 30px;
+	color: #D5D7D6;
+	font-size: 14px;
+}
+
+#links a:hover {
+	text-decoration: line-through;
+	color: #F0C237;
+}
+
+
+#logout {
+	font-size: 12px;
+	position: fixed;
+	right: 15px;
+}
+
+#logout a {
+	margin-right: 30px;
+	padding: 15px;
+}
+
+#logout a:hover {
+	background-color: #F0C237;
+	border-radius: 15px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+#first {
+	border-collapse: collapse;
+	position: absolute;
+	left: 20.82%;
+	top: 20%;
+	width: 60%;
+}
+
+#sec {
+	border-collapse: collapse;
+	margin: 80px auto;
+	width: 90%;
+}
+
+tr, td {
+	padding: 15px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.change {
+	position: absolute;
+	top: 150px;
+	right: 35%;
+}
+
+.change input[type=password], input[type=text] {
+	padding: 10px;
+	margin-bottom: 15px;
+	width: 400px;
+	box-sizing: border-box;
+	padding: 10px;
+	outline: none;
+	/*box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	border-top: none;
+	border-left: none;
+	border-right: none;*/
+	border-radius: 7px;
+	border-bottom: 2px solid #1e1f21;
+	border-top: 2px solid #f1f1f1;
+	border-left: 2px solid #f1f1f1;
+	border-bottom-color: #f2f2f2;
+	transition: border-bottom-color 0.5s;
+	transition-timing-function: linear;
+	font-size: 20px;
+}
+
+.change input[type=password]:focus, input[type=text]:focus {
+	border-bottom: 2px solid #F0C237;
+	background-color: #f1f1f1;
+
+}
+
+.change button {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border-bottom: 3px solid #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	border-left: 1px solid #f1f1f1;
+	border-right: 1px solid #f1f1f1;
+	background-color: #2077CF;
+	font-size: 20px;
+}
+
+.change button:hover {
+	border: 1px solid #F0C237;
+	background-color: #345b96;
+}
+
+#pos1 {
+	position: absolute;
+	top: 165px;
+	right: 200px;
+	width: 20%;
+	-moz-animation: cssAnimation 1s ease-in-out 1s forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: red;
+}
+
+#pos2 {
+	position: absolute;
+	top: 230px;
+	right: 200px;
+	width: 20%;
+	-moz-animation: cssAnimation 1s ease-in-out 1s forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: red;
+}
+
+#pos3 {
+	position: absolute;
+	top: 295px;
+	right: 200px;
+	width: 20%;
+	-moz-animation: cssAnimation 1s ease-in-out 1s forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: red;
+}
+
+#pos4 {
+	position: absolute;
+	top: 360px;
+	right: 200px;
+	width: 20%;
+	-moz-animation: cssAnimation 1s ease-in-out 1s forwards;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	color: red;
+}
+
+@keyframes cssAnimation {
+	to {
+		opacity: 1;
+		overflow:hidden;
+	}
+}
+@-webkit-keyframes cssAnimation {
+	to {
+		opacity: 0;
+	}
+}
+
+.cha {
+	position: absolute;
+	top: 120px;
+	right: 36%;
+	width: 30%;
+}
+
+.cha input[type=password], input[type=text] {
+	margin-bottom: 15px;
+	margin-left: 120px;
+	width: 50px;
+	height: 35px;
+	padding: 5px;
+	box-sizing: border-box;
+	outline: none;
+	border-radius: 7px;
+	border-bottom: 2px solid #1e1f21;
+	border-top: 2px solid #f1f1f1;
+	border-left: 2px solid #f1f1f1;
+	border-bottom-color: #f2f2f2;
+	transition: border-bottom-color 0.5s;
+	transition: width 0.2s;
+	transition-timing-function: linear;
+	font-size: 15px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.cha input[type=password]:focus, input[type=text]:focus {
+	border-bottom: 2px solid #F0C237;
+	background-color: #f1f1f1;
+	width: 70px;
+}
+
+.cha button {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+	border-bottom: 3px solid #f1f1f1;
+	border-top: 1px solid #f1f1f1;
+	border-left: 1px solid #f1f1f1;
+	border-right: 1px solid #f1f1f1;
+	background-color: #2077CF;
+	font-size: 20px;
+}
+
+.cha button:hover {
+	border: 1px solid #F0C237;
+	background-color: #345b96;
+}
+
+.cha p {
+	border-bottom: 1px solid;
+	margin-top: 5px;
+}
+
+.cha p:focus, .cha p:hover {
+	background-color: LightBlue;
+}
+
+#stud {
+	border-collapse: collapse;
+	position: absolute;
+	top: 18%;
+	left: 32%;
+	width: 40%;
+}
+
+#stud tr, td {
+	padding: 15px;
+}
+
+#stud tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+</style>
